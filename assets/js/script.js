@@ -41,6 +41,9 @@ $(document).ready(function () {
     
     // store values on click
     // need to figure out how to loop this process, below works but not good code
+        //psuedo-code
+        // for each # 8-17 set the value in storage to that same number
+        // ie start at 8: 8 set value in local storage key 8 to text value in 8 description
     $("#8.description").val(localStorage.getItem("8"));
     $("#9.description").val(localStorage.getItem("9"));
     $("#10.description").val(localStorage.getItem("10"));
@@ -57,6 +60,9 @@ $(document).ready(function () {
 
 // clear all stored values in calendar/local storage
 // this needs to be looped, doesn't seem right to be just like this
+        //psuedo-code
+        // for each # 8-17 clear the key/value from local storage
+        // ?? is there a clear option, be sure to google that too, maybe thats easier, then no loop?
 $("#btn-clear").on("click", function () {
     window.localStorage.removeItem(["8"]);
     window.localStorage.removeItem(["9"]);
