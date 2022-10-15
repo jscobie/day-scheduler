@@ -1,6 +1,17 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-// add code for all the main stuff
+$(document).ready(function () {
+    // saveBtn add a listener method 
+    $(".saveBtn").on("click", function () {
+        // get values and save into varialbles
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+    
+        // Save time as key and text as value in local storage
+        localStorage.setItem(time, text);
+        })
+
+        
 
 $("#btn-clear").on("click", function () {
     window.localStorage.removeItem(["8"]);
