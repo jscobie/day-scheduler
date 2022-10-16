@@ -67,7 +67,7 @@ $(document).ready(function () {
         // testing looping
 $("#btn-clear").on("click", function () {
     for (let i = startHour; i< endHour+1; i++) {
-        $("#" + [i] + " .description").val(localStorage.getItem([i]));
+        window.localStorage.removeItem([i]);
+        window.location.reload();
     }
-    window.location.reload();
 })
