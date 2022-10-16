@@ -31,14 +31,15 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div id="8" class="row time-block">
-        <div class="col-md-1 hour">
+      <!-- comments on 8am can be repeated on all so only commented 8am slot -->
+      <div id="8" class="row time-block"> <!-- add the row for the 8am-->
+        <div class="col-md-1 hour"> <!--text in the left column and set size to 1/12th-->
             8AM
         </div>
-        <textarea class="col-md-9 description">
+        <textarea class="col-md-9 description"> <!--set the text area to 9/12th width, this is where user adds entry-->
         </textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-        <button class="btn deleteBtn col-md-1"><i class="fas fa-trash"></i></button>
+        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button> <!--save button and 1/12th sizing-->
+        <button class="btn deleteBtn col-md-1"><i class="fas fa-trash"></i></button> <!--this is the added delete button I liked the idea of and is 1/12th sizing-->
       </div>
       <div id="9" class="row time-block">
         <div class="col-md-1 hour">
@@ -125,6 +126,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script> <!--Added link to my script file-->
   </body>
 </html>

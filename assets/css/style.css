@@ -70,6 +70,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+/* Added styles to handle the delete button outside of scope that I added, based on exising save button */
 .deleteBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -83,4 +84,30 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-/* add some media screen resizing option for best grading */
+/* Apply media screen settings when resizing page widths for smaller than 768px */
+@media screen and (max-width: 768px), screen and (max-width: 575px) {
+  .row {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .hour {
+    padding-right: 17%;
+  }
+
+  .saveBtn {
+    border: 0;
+    border-radius: 0.25rem;
+    height: 50px;
+  }
+
+  .deleteBtn {
+    border: 0;
+    border-radius: 0.25rem;
+    height: 50px;
+  }
+
+  textarea {
+    min-height: 85px;
+    border: 0;
+  }

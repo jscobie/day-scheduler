@@ -1,23 +1,25 @@
 // sets the date format for the header section currentDay id for showing on page
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-// variables for loops
+// variables for loops if times needed to be adjustable
 var startHour = 8;
 var endHour = 17;
 
+// when document is ready to the DOM set up the 2 listeners (save and delete), prep a timeSlots function
+// and handle how to load from localstorage on load of page
 $(document).ready(function () {
     // saveBtn click listener 
     $(".saveBtn").on("click", function () {
-        // Get nearby values of the description in JQuery
+        // Get values of the time (key) and description(value)
         var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
     
-        // Save text in local storage
+        // Save to the local storage
         localStorage.setItem(time, text);
     })
     
     $(".deleteBtn").on("click", function () {
-        // Get nearby values of the time key
+        // Get values of the time key so we know which to delete
         var deleteTime = $(this).parent().attr("id");
     
         //remove single item from localstorage and refresh page to show deleted item gone
@@ -25,7 +27,8 @@ $(document).ready(function () {
         window.location.reload();
     })    
 
-    function timeTracker() {
+    // this applies the color/scheme to the time slots based on is it past, present, or future.
+    function timeSlots() {
         //get current number of hours.
         var timeNow = moment().hour();
     
@@ -52,14 +55,16 @@ $(document).ready(function () {
             })
         }
     
+    // this handles the loading of localstorage data to the page on reloads or revisits
     for (let i = startHour; i< endHour+1; i++) {
         $("#" + [i] + " .description").val(localStorage.getItem([i]));
     }
 
-    timeTracker();
+    // once page/DOM is loaded run the timeSlots function to set up page for loaded values and color/scheme
+    timeSlots();
 })
 
-// clear all stored values in calendar/local storage
+// clear all stored values in calendar/local storage and reload page
 $("#btn-clear").on("click", function () {
     window.localStorage.clear();
     window.location.reload();
