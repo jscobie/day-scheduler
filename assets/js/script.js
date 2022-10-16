@@ -1,6 +1,10 @@
 // sets the date format for the header section currentDay id for showing on page
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
+// variables for loops
+var startHour = 8;
+var endHour = 17;
+
 $(document).ready(function () {
     // saveBtn add a listener method 
     $(".saveBtn").on("click", function () {
@@ -59,20 +63,11 @@ $(document).ready(function () {
 })
 
 // clear all stored values in calendar/local storage
-// this needs to be looped, doesn't seem right to be just like this
-        //psuedo-code
-        // for each # 8-17 clear the key/value from local storage
         // ?? is there a clear option, be sure to google that too, maybe thats easier, then no loop?
+        // testing looping
 $("#btn-clear").on("click", function () {
-    window.localStorage.removeItem(["8"]);
-    window.localStorage.removeItem(["9"]);
-    window.localStorage.removeItem(["10"]);
-    window.localStorage.removeItem(["11"]);
-    window.localStorage.removeItem(["12"]);
-    window.localStorage.removeItem(["13"]);
-    window.localStorage.removeItem(["14"]);
-    window.localStorage.removeItem(["15"]);
-    window.localStorage.removeItem(["16"]);
-    window.localStorage.removeItem(["17"]);
+    for (let i = startHour; i< endHour+1; i++) {
+        $("#" + [i] + " .description").val(localStorage.getItem([i]));
+    }
     window.location.reload();
 })
