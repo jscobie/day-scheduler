@@ -1,16 +1,16 @@
-# Challenge 04 Web-APIs: Code Quiz
+# Challenge 05 Third-Party APIs: Work Day Scheduler
 
 ## Description
 
-This project was built to showcase my ability to supply a working Quiz on coding topics to impress that I have learned the various steps of CSS, HTML, JavaScript, and Web-API's and can use them to make a website. This project tests simple HTML and CSS knowledge but is heavily showcasing JavaScript and Web-API coding to handle a quiz with high scores.
+This project was built to showcase my ability to supply a working Work Day Scheduler. To complete this I was tasked to use knowledge learned in week 5 along with the previous weeks. This meant the majority of this project was built using third party API's to complete this both functionally and stylistically.
 
-When a user arrives, they click a start button and they will begin a timed test. When they answer one question they will be prompted to another until all questions are completed or time runs out. If the user answers incorrectly time is subtracted from the clock. The game ends when the timer reaches 0 or user has exhausted all questions. Once the game ends the user can save their initials and score. The highscores are stored on another page and can be cleared by the user through clicking a button.
+When a user arrives for the first time they are greeted with a nice day scheduler that is empty and shows today's date at the top under the title. Depending on the time of day the text boxes are changed to various colors; green for future, red for current, and grey for past. The user can enter into the text area a note about their task and click the save button to save that task. If they wish to remove a saved task I went outside the requirements and added a delete button on the right of the save button which allows since hour entries to be removed as this is a great addition to this for more functionality. Additionally I added a button in the header that allows the user to clear the entire scheduler.
 
 ## Mock-Up
 
-Github Repository Link: https://github.com/jscobie/quiz-show
+Github Repository Link: https://github.com/jscobie/day-scheduler
 
-Deployed page Link: https://jscobie.github.io/quiz-show/
+Deployed page Link: https://jscobie.github.io/day-scheduler/
 
 The following animation demonstrates the application functionality:
 
@@ -18,7 +18,7 @@ The following animation demonstrates the application functionality:
 
 ## Installation
 
-Required items are index.html, highscores.html, script.js, script-scores.js, reset.css and style.css files (all to be located in assets folder).
+Required items are index.html, script.js, and style.css files (assets folder has a js folder for script.js and css folder for style.css).
 
 ## Usage
 
