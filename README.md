@@ -22,7 +22,7 @@ Required items are index.html, script.js, and style.css files (assets folder has
 
 Additionally to clone to your computer using SSH from GitHub:
 ```
-git clone git@github.com:jscobie/day-scheduler.git
+git clone https://github.com/jscobie/day-scheduler.git
 ```
 
 ## Usage
