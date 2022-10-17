@@ -14,11 +14,16 @@ Deployed page Link: https://jscobie.github.io/day-scheduler/
 
 The following animation demonstrates the application functionality:
 
-![Quick animation of quiz show created webpage](./assets/quiz-show.gif)
+![Quick animation of quiz show created webpage](./assets/media/day-scheduler.gif)
 
 ## Installation
 
 Required items are index.html, script.js, and style.css files (assets folder has a js folder for script.js and css folder for style.css).
+
+Additionally to clone to your computer using SSH from GitHub:
+```
+git clone git@github.com:jscobie/day-scheduler.git
+```
 
 ## Usage
 
